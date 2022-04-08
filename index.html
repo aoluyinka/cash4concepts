@@ -1,0 +1,14 @@
+<!-- <script src="pkgs/htmx.min.js" defer></script> -->
+<script src="https://unpkg.com/htmx.org@1.7.0" integrity="sha384-EzBXYPt0/T6gxNp0nuPtLkmRpmDBbjg6WmCUZRLXBBwYYmwAUxzlSGej0ARHX0Bo" crossorigin="anonymous" defer></script>
+
+
+<body>
+    <h1>Cash4Concepts</h1>
+
+    <div>
+        <div id="id-value"></div>
+        <button hx-get="value.html" hx-target="#id-value" hx-swap="innerHTML">
+            Evaluate Now!
+        </button>
+    </div>
+</body>
