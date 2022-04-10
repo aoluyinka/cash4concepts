@@ -52,13 +52,16 @@ p {
 
 .button {
   margin: 10 10px;
-  color: rgb(32, 32, 32);
-  background-color: #d5ff3d;
+  color: rgb(255, 255, 255);
+  background-color: #53545e;
   padding: 10px;
   border: 0px solid white;
   transition-duration: 0.3s;
   height: 80px;
   width: 180px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 12px;
 }
 
 .centre {
@@ -69,3 +72,16 @@ p {
 * {
   border: 1px solid #ff0000;
 } */
+
+.font {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  border-radius: 12px;
+  height: 50px;
+  width: 50rem;
+  font-size: 40px;
+  padding: 10px;
+  margin: 20px;
+}
