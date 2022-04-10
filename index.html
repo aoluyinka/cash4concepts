@@ -1,14 +1,29 @@
-<!-- <script src="pkgs/htmx.min.js" defer></script> -->
-<script src="https://unpkg.com/htmx.org@1.7.0" integrity="sha384-EzBXYPt0/T6gxNp0nuPtLkmRpmDBbjg6WmCUZRLXBBwYYmwAUxzlSGej0ARHX0Bo" crossorigin="anonymous" defer></script>
+<script src="pkgs/htmx.min.js" defer></script>
 
+<html>
+  <head>
+    <title>Cash4Concepts</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="css/site.css" />
+    <link rel="stylesheet" type="text/css" href="css/loading.css" />
+  </head>
 
-<body>
+  <body>
     <h1>Cash4Concepts</h1>
 
-    <div>
-        <div id="id-value"></div>
-        <button hx-get="value.html" hx-target="#id-value" hx-swap="innerHTML">
-            Evaluate Now!
+    <div class="centre" id="id-value">
+      <h2>Enter your concept</h2>
+      <input type="text" id="concept" name="concept" />
+      <div>
+        <button
+          class="button"
+          hx-get="loading.html"
+          hx-target="#id-value"
+          hx-swap="innerHTML"
+        >
+          Evaluate Now!
         </button>
+      </div>
     </div>
-</body>
+  </body>
+</html>
