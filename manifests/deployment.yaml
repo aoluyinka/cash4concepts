@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cash4concepts-deployment
+  labels:
+    app: cash4concepts
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cash4concepts
+  template:
+    metadata:
+      labels:
+        app: cash4concepts
+    spec:
+      containers:
+      - name: cash4concepts
+        image: 034397248197.dkr.ecr.us-east-1.amazonaws.com/cash4concepts:latest
+        ports:
+        - containerPort: 80

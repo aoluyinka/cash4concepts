@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: public-lb
+spec:
+  selector:
+    app: cash4concepts
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: web
+  type: LoadBalancer
