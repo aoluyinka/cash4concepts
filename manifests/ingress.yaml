@@ -1,0 +1,30 @@
+apiVersion: networking.k8s.io/v1
+kind: IngressClass
+metadata:
+  name: nginx
+spec:
+  controller: k8s.io/ingress-nginx
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cash4concepts-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: globalsign
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: "api.cash4concepts.rxdevlab.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: cash4concepts-api-service
+            port:
+              number: 80
+  tls:
+  - hosts:
+    - api.cash4concepts.org
+    secretName: cash4concepts-api-cert
