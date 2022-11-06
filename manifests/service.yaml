@@ -4,11 +4,13 @@ metadata:
   name: public-lb
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: nlb
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:us-east-1:034397248197:certificate/39ce2b4c-aba9-4b8b-8e9c-21e555fc1784
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
 spec:
   selector:
     app: cash4concepts
   ports:
     - protocol: TCP
-      port: 80
+      port: 443
       targetPort: 80
   type: LoadBalancer
